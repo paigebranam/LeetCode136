@@ -1,0 +1,12 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+    
+        for x in nums:
+            if (nums.count(x)<2):
+                return x
+                break
+        
