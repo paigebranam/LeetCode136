@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        //sort array 
+        sort(nums.begin(), nums.end());
+        //declare  a variable to store single num in
+        int singNum;
+        //loop over array
+        for(int i=0; i < nums.size(); i++){
+            //if the value of nums[i] does not equal the value of i+1, it is the                    single value
+            if(nums[i] != nums[i+1])
+                singNum = nums[i];
+            break;
+        }
+        return singNum;
+        
+        
+    }
+};
